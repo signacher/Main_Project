@@ -2,10 +2,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from termcolor import colored
-
 from base.base_class import Base
 from utilites.logger import Logger
-
+import allure
 
 class MainPage(Base):
 
@@ -113,35 +112,39 @@ class MainPage(Base):
     #Methods
 
     def select_product1(self):
-        Logger.add_start_step(method="select_product1")
-        self.get_current_url()
-        self.click_select_product_1()
-        self.text_select_product_1()
-        self.click_cart()
-        Logger.add_end_step(url=self.driver.current_url, method="select_product1")
+        with allure.step('Select_product Sauce Labs Backpack'):
+            Logger.add_start_step(method="select_product1")
+            self.get_current_url()
+            self.click_select_product_1()
+            self.text_select_product_1()
+            self.click_cart()
+            Logger.add_end_step(url=self.driver.current_url, method="select_product1")
 
     def select_product2(self):
-        Logger.add_start_step(method="select_product2")
-        self.get_current_url()
-        self.text_select_product_2()
-        self.click_select_product_2()
-        self.click_cart()
-        Logger.add_end_step(url=self.driver.current_url, method="select_product2")
+        with allure.step('Select_product Sauce Labs Bike Light'):
+            Logger.add_start_step(method="select_product2")
+            self.get_current_url()
+            self.text_select_product_2()
+            self.click_select_product_2()
+            self.click_cart()
+            Logger.add_end_step(url=self.driver.current_url, method="select_product2")
 
     def select_product3(self):
-        Logger.add_start_step(method="select_product3")
-        self.get_current_url()
-        self.text_select_product_3()
-        self.click_select_product_3()
-        self.click_cart()
-        Logger.add_end_step(url=self.driver.current_url, method="select_product3")
+        with allure.step('Select_product Sauce Labs Bolt T-Shirt'):
+            Logger.add_start_step(method="select_product3")
+            self.get_current_url()
+            self.text_select_product_3()
+            self.click_select_product_3()
+            self.click_cart()
+            Logger.add_end_step(url=self.driver.current_url, method="select_product3")
 
     def select_menu_about(self):
-        Logger.add_start_step(method="select_menu_about")
-        self.get_current_url()
-        self.click_menu()
-        self.click_link_about()
-        self.assert_url('https://saucelabs.com/')
-        Logger.add_end_step(url=self.driver.current_url, method="select_menu_about")
+        with allure.step('Select menu About'):
+            Logger.add_start_step(method="select_menu_about")
+            self.get_current_url()
+            self.click_menu()
+            self.click_link_about()
+            self.assert_url('https://saucelabs.com/')
+            Logger.add_end_step(url=self.driver.current_url, method="select_menu_about")
 
 

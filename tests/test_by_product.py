@@ -11,8 +11,9 @@ from pages.finish_page import Finish_page
 from pages.login_page import LoginPage
 from pages.main_page import MainPage
 from pages.paymeint_page import Payment_page
-
+import allure
 @pytest.mark.run(order=1)
+@allure.description('Test buy product1')
 def test_buy_product1(set_up, set_group):
     options = Options()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])

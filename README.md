@@ -11,4 +11,7 @@ pytest -s -v  -p no:warnings {имя_файла} Запуск отдельног
 Запуск отдельного теста в файле
  pytest -s -v  -p no:warnings -k  {имя_теста}
 
+Запуск всех тестов с формированием файлов для отчета Allure(файлы сохраняются в указанной папке test_result)
+ pytest --alluredir=test_result/ tests/
+
 
