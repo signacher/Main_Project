@@ -14,4 +14,7 @@ pytest -s -v  -p no:warnings {имя_файла} Запуск отдельног
 Запуск всех тестов с формированием файлов для отчета Allure(файлы сохраняются в указанной папке test_result)
  pytest --alluredir=test_result/ tests/
 
+Отчет на mail
+java "-DconfigFile=notifications/config.json" -jar notifications/allure-notifications-4.2.1.jar
+
 
