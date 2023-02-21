@@ -30,5 +30,5 @@ class Base():
 
     def assert_url(self, result):
         get_url = self.driver.current_url
-        assert get_url == result
+        assert get_url == result, "Assert failed. Wrong URL"
         print('Assert OK. Good value URL')

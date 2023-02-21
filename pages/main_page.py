@@ -16,7 +16,7 @@ class MainPage(Base):
     #Locators
 
     select_product_1 = "//button[@id='add-to-cart-sauce-labs-backpack']"
-    select_product_2 = "//button[@id='add-to-cart-sauce-labs-bike-light']"
+    select_product_2 = "//button[@id='add-to-cart-sauce-labs-bike-ligh']"
     select_product_3 = "//button[@id='add-to-cart-sauce-labs-bolt-t-shirt']"
     cart = "//div[@id='shopping_cart_container']"
     menu = "//button[@id='react-burger-menu-btn']"
@@ -117,6 +117,7 @@ class MainPage(Base):
             self.get_current_url()
             self.click_select_product_1()
             self.text_select_product_1()
+            self.assert_url('https://www.saucedemo.com/inventory.html')
             self.click_cart()
             Logger.add_end_step(url=self.driver.current_url, method="select_product1")
 
@@ -126,6 +127,7 @@ class MainPage(Base):
             self.get_current_url()
             self.text_select_product_2()
             self.click_select_product_2()
+            self.assert_url('https://www.saucedemo.com/inventory.html')
             self.click_cart()
             Logger.add_end_step(url=self.driver.current_url, method="select_product2")
 
@@ -135,6 +137,7 @@ class MainPage(Base):
             self.get_current_url()
             self.text_select_product_3()
             self.click_select_product_3()
+            self.assert_url('https://www.saucedemo.com/inventor.html')
             self.click_cart()
             Logger.add_end_step(url=self.driver.current_url, method="select_product3")
 
